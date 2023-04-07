@@ -1,0 +1,16 @@
+services:
+  compute_edge:
+    image: compute_edge
+    networks:
+      - edge
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    ports:
+      - 7676:7676
+
+networks:
+  edge:
+    name: edge
+    driver: bridge

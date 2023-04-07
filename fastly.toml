@@ -1,0 +1,17 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["stephen@vstream-corp.com"]
+description = ""
+language = "javascript"
+manifest_version = 2
+name = "compute-edge-ts-docker"
+service_id = ""
+
+[scripts]
+  build = "npm run build"
+
+[local_server]
+  [local_server.backends]
+    [local_server.backends.origin]
+      url = "http://0.0.0.0:7000"

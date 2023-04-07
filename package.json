@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "compute-edge-ts-docker",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^16 || >=18"
+  },
+  "scripts": {
+    "dev": "fastly compute serve",
+    "format": "prettier --write .",
+    "prebuild": "tsc",
+    "build": "js-compute-runtime build/index.js bin/main.wasm",
+    "deploy": "fastly compute publish"
+  },
+  "dependencies": {
+    "@fastly/js-compute": "1.6.0"
+  },
+  "devDependencies": {
+    "prettier": "2.8.7",
+    "typescript": "5.0.3"
+  }
+}
